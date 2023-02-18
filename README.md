@@ -6,4 +6,5 @@
 如果你想帮助Ta，可以发邮件至"ZZH20081023@163.com"  
 或添加QQ：3404832155
 ## 关于EDB
-它是为[Here-Talk计划](https://github.com/ZeHangZhu/Here-Talk-release)特地设计斗的数据库  
+它是为[Here-Talk计划](https://github.com/ZeHangZhu/Here-Talk-release)特地设计的数据库  
+作者：ZZH（ZeHang Zhu）
