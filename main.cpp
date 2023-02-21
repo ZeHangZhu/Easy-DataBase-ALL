@@ -1,7 +1,7 @@
-//¶¨Òå Python/C API½Ó¿Ú 
+//å®šä¹‰ Python/C APIæ¥å£ 
 #define PY_SSIZE_T_CLEAN
 #include <Python.h> 
-//µ¼Èë¿â
+//å¯¼å…¥åº“
 #include <iostream>
 #include <fstream>
 #include <windows.h>
@@ -12,7 +12,7 @@ using namespace std;
 
 //---------------------------------------------
 
-//º¯ÊıÔ­ĞÍÉùÃ÷
+//å‡½æ•°åŸå‹å£°æ˜
 char str2char(string data);
 void start(string obj);
 void save(string obj);
@@ -23,20 +23,23 @@ int main(){
 	
 }
 
-//Æô¶¯·şÎñÆ÷
+//å¯åŠ¨æœåŠ¡å™¨
 void start(string obj){
+	//å®šä¹‰æ•°æ®åº“æ–‡ä»¶å
 	char filename[37] = str2char(obj);
 	fstream dbfile;
 	dbfile.open(filename,ios::in);
-	string command;
-	command = "7z.exe e -y -oc:\\db " + filename;	//Éú³É½âÑ¹ÃüÁî
-	char cmd[37] = str2char(command);	//×ªchar
+	string command;	//å®šä¹‰è¦æ‰§è¡Œçš„å‘½ä»¤
+	command = "7z.exe e -y -oc:\\db " + filename;	//ç”Ÿæˆè§£å‹å‘½ä»¤
+	char cmd[37] = str2char(command);	//è½¬char
+	
+	//æ£€æµ‹æ•°æ®åº“æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 	if (dbfile.is_open()){
-		dbfile.close();	//¹Ø±ÕÎÄ¼ş
-		system(cmd);	//½âÑ¹ÎÄ¼ş
+		dbfile.close();	//å…³é—­æ–‡ä»¶
+		system(cmd);	//è§£å‹æ–‡ä»¶
 	}
 	else{
-		cout<<"[!]ÎŞ·¨Æô¶¯Êı¾İ¿â!"<<endl;
+		cout<<"[!]æ— æ³•å¯åŠ¨æ•°æ®åº“!"<<endl;
 	}
-	cout<<"[*]·şÎñÆ÷Æô¶¯³É¹¦!"<<endl;
+	cout<<"[*]æœåŠ¡å™¨å¯åŠ¨æˆåŠŸ!"<<endl;
 }
